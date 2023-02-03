@@ -5,8 +5,10 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { useParams } from "react"
 
-const url = ["http://localhost:3000/","http://localhost:3000/single-blogs/:id"]
+const { id } = useParams()
+const url = ["https://bloggers-app.vercel.app/",`https://bloggers-app.vercel.app/single-blogs/${id}`]
 
 const element = ReactDOM.createRoot(document.getElementById('title'))
 const root = ReactDOM.createRoot(document.getElementById('root'))

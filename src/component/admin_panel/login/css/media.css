@@ -1,0 +1,50 @@
+@media only screen and (max-width:576px) {
+    .bg-color{
+        height: 95vh;
+    }
+
+    .direct,
+    .direct-register {
+        width: 100%;
+    }
+
+    .direct-register {
+        top: 25vh;
+        left: 50%;
+        height: 92%;
+        background: linear-gradient(#15244D,#1E4B83);
+        padding: 20px;
+    }
+
+    .input{
+        background-color: #101C44;
+    }
+
+    .direct-register input::placeholder {
+        text-align: center;
+    }
+
+    .button-login{
+        width: 50%;
+        background-color: rgb(247, 186, 71);
+        font-weight: bolder;
+    }
+
+    .width-mobile{
+        height: 60%;
+        top: 30vh;
+    }
+
+    .icon-color{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .direct {
+        height: 40%;
+    }
+    .d-md {
+        height: 60%;
+    }
+}

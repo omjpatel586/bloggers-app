@@ -1,0 +1,105 @@
+.blog-comments {
+  padding: 100px 0px 60px 0px;
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .blog-comments {
+    padding: 80px 30px;
+  }
+}
+
+.blog-comments h2 {
+  border-top: 1px solid #dddddd;
+  padding-top: 30px;
+  margin: 10px 0px 40px 0px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #272727;
+}
+
+.blog-comments .comment-item {
+  margin-left: 100px;
+}
+
+.blog-comments ul.coments-content {
+  padding: 0;
+  margin: 0;
+}
+
+.blog-comments ul.coments-content a {
+  color: #5e5e5e;
+}
+
+.blog-comments ul.coments-content a:hover {
+  color: #272727;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+
+.blog-comments ul.coments-content li {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-comments ul.coments-content li .author-title {
+  font-size: 18px;
+}
+
+.blog-comments ul.coments-content li .comment-date {
+  font-size: 13px;
+  color: #9e9e9e;
+  margin-bottom: 15px;
+}
+
+.blog-comments ul.coments-content span.comment-date {
+  display: block;
+}
+
+.blog-comments ul.coments-content p {
+  display: block;
+}
+
+/* ---------------------------------------------------------------------
+                            MOBILE UI CSS
+------------------------------------------------------------------------ */
+.image-m-blogs {
+  width: 100%;
+  height: 100%;
+}
+
+.image-m-blogs img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.content-mobile h1 {
+  max-height: 90px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.content-mobile .desp-m {
+  max-height: 78px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.content-mobile .btn-taker{
+  font-size: 15px;
+  border: none;
+  background-color: transparent;
+}

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.child1{
+    width: 400px;
+    height: 100vh;
+}
+
+.child2{
+    width: calc(100% - 400px);
+    height: 100vh;
+}
+
+.direct{
+    left: 0;
+    bottom: 0;
+}
+
+.view-data{
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 28px;
+}
+
+.heading{
+    padding: 20px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.view-data h1{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.input-wrap{
+    flex-wrap: wrap;
+}
+
+.contact {
+    display: none;
+}
+
+.m-h1{
+    font-size: 20px;
+    font-weight: bolder;
+    color: gray;
+}
+
+.button{
+    width: 200px;
+    border-radius: 14px;
+    font-size: 20px;
+    background-color: orange;
+    color: blue;
+    transition: 1s color;
+    transform: scale(1);
+}
+
+.button-login{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #025091;
+    color: white;
+    border-radius: 14px;
+}
+
+.button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.button-1{
+    width: 100px;
+    border-radius: 14px;
+    font-size: 20px;
+    background-color: orange;
+    color: green;
+    transition: 1s color;
+    transform: scale(1);
+}
+
+.button-1:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.content{
+    flex-wrap: wrap;
+}

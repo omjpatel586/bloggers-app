@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image1{
+    width: 200px;
+    height: 150px;
+}
+
+tr th{
+    text-align: center;
+}
+
+tr .hebtn{
+    display: none;
+}
+
+tr .hcbtn{
+    display: none;
+}
+
+tbody tr:hover .hebtn{
+    display: block;
+}
+
+.image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}

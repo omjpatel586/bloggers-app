@@ -4,11 +4,9 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { useParams } from "react"
+import 'bootstrap/dist/css/bootstrap.min.css"
 
-const { id } = useParams()
-const url = ["https://bloggers-app.vercel.app/",`https://bloggers-app.vercel.app/single-blogs/${id}`]
+const url = ["https://bloggers-app.vercel.app/"]
 
 const element = ReactDOM.createRoot(document.getElementById('title'))
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -17,7 +15,7 @@ root.render(
     <App />
   </BrowserRouter>
 )
-if(url.includes(window.location.href)) {
+if(url.includes(window.location.href) || window.location.href.search("single-blogs")) {
   element.render("India Blogs")
 } else {
   element.render("Admin Panel")

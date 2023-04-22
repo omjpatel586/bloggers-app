@@ -11,7 +11,6 @@ export const View_Comments = () => {
             .then((resp) => resp.json())
             .then((fetch) => {
                 setdata(fetch)
-                console.log(data)
             })
     }, [])
 
@@ -112,6 +111,7 @@ export const View_Comments = () => {
                                                         </p>
                                                     </td>
                                                 </tr>
+                                                {data.toString()}
                                                 {
                                                     data.map((i, j) =>
                                                         <tr className="position-relative">

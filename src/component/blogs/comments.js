@@ -5,20 +5,14 @@ import { Container } from "react-bootstrap"
 export const Comments = (props) => {
     const [value, setValue] = useState([])
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const form = document.getElementById('form')
-        const comt = [form.elements[0].value, form.elements[1].value,
-        form.elements[2].value]
+    const handleSubmit = () => {
         const fdata = new FormData()
         let date = new Date()
-        console.log(value)
-        return
         date = date.getDay()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
         fdata.append("cid", props.data)
-        fdata.append("name", comt[0])
-        fdata.append("subject", comt[1])
-        fdata.append("comments", comt[2])
+        fdata.append("name", value[0])
+        fdata.append("subject", value[1])
+        fdata.append("comments", value[2])
         fdata.append("datetime", date)
         axios.post("https://omcdmiweb.000webhostapp.com/React.js_Project_API./addComments.php", fdata)
             .then(function () {

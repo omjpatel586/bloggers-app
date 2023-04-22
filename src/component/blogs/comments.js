@@ -2,7 +2,8 @@ import axios from "axios"
 import { Container } from "react-bootstrap"
 
 export const Comments = (props) => {
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault()
         const form = document.getElementById('form')
         const comt = [form.elements[0].value, form.elements[1].value,
         form.elements[2].value]

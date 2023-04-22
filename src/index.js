@@ -4,7 +4,7 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
-import 'bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const url = ["https://bloggers-app.vercel.app/"]
 

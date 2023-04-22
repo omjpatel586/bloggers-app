@@ -1,7 +1,10 @@
 import axios from "axios"
+import { useState } from "react"
 import { Container } from "react-bootstrap"
 
 export const Comments = (props) => {
+    const [value, setValue] = useState([])
+
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = document.getElementById('form')
@@ -9,7 +12,7 @@ export const Comments = (props) => {
         form.elements[2].value]
         const fdata = new FormData()
         let date = new Date()
-        console.log(comt)
+        console.log(value)
         return
         date = date.getDay()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
         fdata.append("cid", props.data)
@@ -23,6 +26,12 @@ export const Comments = (props) => {
             })
     }
 
+    const fun = (index, newValue) => {
+        let arr = value
+        arr[index] = newValue
+        setValue(arr)
+    }
+
     return (
         <div>
             <Container>
@@ -31,14 +40,14 @@ export const Comments = (props) => {
                     <form onSubmit={handleSubmit} id="form">
                         <div className="d-flex">
                             <div className=" col-md-4 col-sm-4 col-xs-6">
-                                <input type="text" placeholder="Name :-" className="blog-search-field"></input>
+                                <input type="text" placeholder="Name :-" className="blog-search-field" onChange={(i)=>fun(0, i.target.value)}></input>
                             </div>
                             <div className="col-md-4 col-sm-4 col-xs-12">
-                                <input type="text" placeholder="Subject :-" className="blog-search-field"></input>
+                                <input type="text" placeholder="Subject :-" className="blog-search-field" onChange={(i)=>fun(1, i.target.value)}></input>
                             </div>
                         </div>
                         <div className="col-md-12 col-sm-12">
-                            <textarea placeholder="Comment...."></textarea>
+                            <textarea placeholder="Comment...." onChange={(i)=>fun(2, i.target.value)}></textarea>
                         </div>
                         <div className="submit-comment col-md-12">
                             <div className="btn-black">

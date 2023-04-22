@@ -8,6 +8,8 @@ export const Comments = (props) => {
         form.elements[2].value]
         const fdata = new FormData()
         let date = new Date()
+        console.log(comt)
+        return
         date = date.getDay()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
         fdata.append("cid", props.data)
         fdata.append("name", comt[0])

@@ -114,7 +114,6 @@ export const View_Comments = () => {
                                                 {
                                                     data.map((i, j) =>
                                                         <tr className="position-relative">
-                                                            {console.log(i)}
                                                             <td>{i.id}</td>
                                                             <td>
                                                                 <h1 className="fw-bolder fs-6">{i.name}</h1>

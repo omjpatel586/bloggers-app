@@ -11,6 +11,7 @@ AOS.init()
 export const Blogs = () => {
     const [data, setdata] = useState([])
     const [like, setlike] = useState([])
+    const [likeInfo, setLikeinfo] = useState([])
     const play = new Audio(audio)
 
     useEffect(() => {
@@ -59,7 +60,10 @@ export const Blogs = () => {
         data.map((i, k) => {
             like.map((j) => {
                 if (i.id === j.bid) {
-                    document.getElementById("l" + k).innerHTML = j.likes + " Likes"
+                    // document.getElementById("l" + k).innerHTML = j.likes + " Likes"
+                    let arr = likeInfo
+                    arr[k] = { likes: j.likes }
+                    setLikeinfo(arr)
                 }
             })
         })
@@ -98,7 +102,11 @@ export const Blogs = () => {
                                                     <h1 className="fw-bolder fs-6 m-0 p-2" style={{ color: "gray" }}>Like</h1>
                                                 </div>
                                                 <div>
-                                                    <h1 className="fw-bolder fs-6 m-0 text-gray" id={"l" + j}>0 Likes</h1>
+                                                    {
+                                                        likeInfo.map((i) => {
+                                                            <h1 className="fw-bolder fs-6 m-0 text-gray">{i.likes} Likes</h1>
+                                                        })
+                                                    }
                                                 </div>
                                             </div>
                                         </div>
@@ -132,7 +140,11 @@ export const Blogs = () => {
                                                 <h1 className="fw-bolder fs-6 m-0 p-2" style={{ color: "gray" }}>Like</h1>
                                             </div>
                                             <div>
-                                                <h1 className="fw-bolder fs-6 m-0 text-gray" id={"l" + j}>0 Likes</h1>
+                                                {
+                                                    likeInfo.map((i) => {
+                                                        <h1 className="fw-bolder fs-6 m-0 text-gray">{i.likes} Likes</h1>
+                                                    })
+                                                }
                                             </div>
                                         </div>
                                     </div>

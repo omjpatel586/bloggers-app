@@ -3,6 +3,13 @@
   display: inline-block;
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 @media (max-width: 991px) {
   .blog-comments {
     padding: 80px 30px;
@@ -98,7 +105,7 @@
   text-overflow: ellipsis;
 }
 
-.content-mobile .btn-taker{
+.content-mobile .btn-taker {
   font-size: 15px;
   border: none;
   background-color: transparent;

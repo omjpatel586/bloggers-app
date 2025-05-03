@@ -1,7 +1,6 @@
 import { Header } from "./Header"
 import { Sidebar } from "./Sidebar"
 import { General_Form } from "./generalForm"
-import { Datatable } from "./dataTable"
 import { Case, CaseElse, Switch } from "react-context-switch"
 import { View } from "./View"
 import { View_Comments } from "./comments"

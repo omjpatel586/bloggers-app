@@ -17,7 +17,7 @@ export const Single = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost/Patel_Om/project/single.php?id=${id}`)
+      .get(`http://blogapplicaton.free.nf/project/single.php?id=${id}`)
       .then(function (fetch) {
         setdata(fetch.data)
         if (fetch.data.length !== 0) {

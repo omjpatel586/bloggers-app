@@ -21,7 +21,7 @@ const Login = () => {
     fdata.append('password', data[1].password)
 
     axios
-      .post('http://localhost/Patel_Om/project/', fdata)
+      .post('http://blogapplicaton.free.nf/project/', fdata)
       .then(function (success) {
         setval([success.data, true])
         console.log(success.data)

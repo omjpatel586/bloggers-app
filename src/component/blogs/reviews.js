@@ -5,7 +5,9 @@ export const Reviews = (props) => {
   const [data, setdata] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost/Patel_Om/project/getComments.php?id=${props.data}`)
+    fetch(
+      `http://blogapplicaton.free.nf/project/getComments.php?id=${props.data}`,
+    )
       .then((resp) => resp.json())
       .then((fetch) => {
         setdata(fetch)

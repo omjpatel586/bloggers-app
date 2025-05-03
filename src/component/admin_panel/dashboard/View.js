@@ -11,7 +11,7 @@ export const View = () => {
 
   const reFetch = () => {
     axios
-      .post('http://localhost/Patel_Om/project/getBlogs.php', fdata)
+      .post('http://blogapplicaton.free.nf/project/getBlogs.php', fdata)
       .then(function (fetch) {
         setdata([...fetch.data])
         console.log(fetch.data)
@@ -27,7 +27,7 @@ export const View = () => {
     fdata.append('status', Number(status))
     fdata.append('uid', window.localStorage.getItem('uid'))
     axios
-      .post('http://localhost/Patel_Om/project/editBlogs.php', fdata)
+      .post('http://blogapplicaton.free.nf/project/editBlogs.php', fdata)
       .then(function () {
         reFetch()
       })
@@ -39,7 +39,7 @@ export const View = () => {
     fdata.append('blogs', 'delete')
     fdata.append('uid', window.localStorage.getItem('uid'))
     axios
-      .post('http://localhost/Patel_Om/project/editBlogs.php', fdata)
+      .post('http://blogapplicaton.free.nf/project/editBlogs.php', fdata)
       .then(function () {
         reFetch()
       })
@@ -80,7 +80,7 @@ export const View = () => {
         if (image === undefined) {
           fdata.append('image', i.frame)
           axios
-            .post('http://localhost/Patel_Om/project/editBlogs.php', fdata)
+            .post('http://blogapplicaton.free.nf/project/editBlogs.php', fdata)
             .then(function () {
               // window.location.reload()
             })
@@ -88,7 +88,7 @@ export const View = () => {
           fdata.append('image', image)
           fdata.append('old_img', i.frame)
           axios
-            .post('http://localhost/Patel_Om/project/editBlogs.php', fdata)
+            .post('http://blogapplicaton.free.nf/project/editBlogs.php', fdata)
             .then(function () {
               // window.location.reload()
             })

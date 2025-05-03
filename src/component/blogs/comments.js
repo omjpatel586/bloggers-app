@@ -29,7 +29,7 @@ export const Comments = (props) => {
     fdata.append('comments', comt[2])
     fdata.append('datetime', date)
     axios
-      .post('http://localhost/Patel_Om/project/addComments.php', fdata)
+      .post('http://blogapplicaton.free.nf/project/addComments.php', fdata)
       .then(function () {
         window.location.reload()
       })

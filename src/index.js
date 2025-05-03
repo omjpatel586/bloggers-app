@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-const url = ["http://localhost:3000/","http://localhost:3000/single-blogs/:id"]
+const url = ["https://bloggers-app.vercel.app/"]
 
 const element = ReactDOM.createRoot(document.getElementById('title'))
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -15,11 +15,7 @@ root.render(
     <App />
   </BrowserRouter>
 )
-if(url.includes(window.location.href)) {
-  element.render("India Blogs")
-} else {
-  element.render("Admin Panel")
-}
+element.render("India Blogs")
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

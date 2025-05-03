@@ -4,7 +4,7 @@ import { BiLogOutCircle } from "react-icons/bi"
 export const Logout = () => {
     const logout = () => {
         window.localStorage.removeItem("uid")
-        window.location.replace("http://localhost:3000/admin")
+        window.location.href = "/admin"
     }
 
     return (

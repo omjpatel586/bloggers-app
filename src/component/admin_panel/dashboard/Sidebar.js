@@ -10,7 +10,7 @@ export const Sidebar = () => {
 
   useEffect(() => {
     axios
-      .post('http://blogapplicaton.free.nf/project/getID.php', fdata)
+      .post('https://blogapplicaton.free.nf/project/getID.php', fdata)
       .then(function (fetch) {
         setdata(fetch.data)
       })
@@ -36,7 +36,7 @@ export const Sidebar = () => {
           <div className="user-panel mt-3 pb-3 mb-3 d-flex">
             <div className="image">
               <img
-                src={`http://blogapplicaton.free.nf/project/${data.picture}`}
+                src={`https://blogapplicaton.free.nf/project/${data.picture}`}
                 className="img-circle elevation-2"
                 alt="User Image"
               />

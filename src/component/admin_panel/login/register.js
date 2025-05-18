@@ -29,7 +29,7 @@ export const Register = () => {
     fdata.append('image', ref.current.files[0])
 
     axios
-      .post('http://blogapplicaton.free.nf/project/registerapi.php', fdata)
+      .post('https://blogapplicaton.free.nf/project/registerapi.php', fdata)
       .then((data) => {
         console.log(data)
         window.location.reload()

@@ -26,7 +26,7 @@ export const General_Form = () => {
     fdata.append('simg', status)
     fdata.append('uid', window.localStorage.getItem('uid'))
     axios
-      .post('http://blogapplicaton.free.nf/project/', fdata)
+      .post('https://blogapplicaton.free.nf/project/', fdata)
       .then(function (fetch) {
         console.log(fetch)
       })

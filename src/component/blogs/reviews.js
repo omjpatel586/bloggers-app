@@ -6,7 +6,7 @@ export const Reviews = (props) => {
 
   useEffect(() => {
     fetch(
-      `http://blogapplicaton.free.nf/project/getComments.php?id=${props.data}`,
+      `https://blogapplicaton.free.nf/project/getComments.php?id=${props.data}`,
     )
       .then((resp) => resp.json())
       .then((fetch) => {

@@ -18,7 +18,7 @@ export const Blogs = () => {
 
   useEffect(() => {
     axios
-      .get('http://blogapplicaton.free.nf/project/getBlogs.php')
+      .get('https://blogapplicaton.free.nf/project/getBlogs.php')
       .then(function (fetch) {
         setdata([...fetch.data])
         if (fetch.data.length !== 0) {
@@ -37,7 +37,7 @@ export const Blogs = () => {
   const handleLike = (props) => {
     play.play()
     axios
-      .post(`http://blogapplicaton.free.nf/project/rewards.php?id=${props}`)
+      .post(`https://blogapplicaton.free.nf/project/rewards.php?id=${props}`)
       .then(() => {
         window.location.reload()
       })
@@ -55,7 +55,7 @@ export const Blogs = () => {
 
   useEffect(() => {
     axios
-      .get('http://blogapplicaton.free.nf/project/getLikes.php')
+      .get('https://blogapplicaton.free.nf/project/getLikes.php')
       .then(function (fetch) {
         setlike([...fetch.data])
       })

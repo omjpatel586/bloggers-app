@@ -6,7 +6,7 @@ export const View_Comments = () => {
   const [data, setdata] = useState([])
 
   const reFetch = () => {
-    fetch('http://blogapplicaton.free.nf/project/getComments.php')
+    fetch('https://blogapplicaton.free.nf/project/getComments.php')
       .then((resp) => resp.json())
       .then((fetch) => {
         setdata(fetch)
@@ -24,7 +24,7 @@ export const View_Comments = () => {
     fdata.append('status', Number(status))
     fdata.append('cid', blogId)
     axios
-      .post('http://blogapplicaton.free.nf/project/AComments.php', fdata)
+      .post('https://blogapplicaton.free.nf/project/AComments.php', fdata)
       .then(function () {
         reFetch()
       })
@@ -35,7 +35,7 @@ export const View_Comments = () => {
     fdata.append('id', id)
     fdata.append('cid', blogId)
     axios
-      .post('http://blogapplicaton.free.nf/project/DeleteComments.php', fdata)
+      .post('https://blogapplicaton.free.nf/project/DeleteComments.php', fdata)
       .then(function () {
         reFetch()
       })
